@@ -97,7 +97,7 @@ Library-Management-System/
 |   ├── library_manager.py
 |   ├── db_config.json
 |   ├── Books.csv
-|   ├── requirements.txt
+|   ├── Requirements.txt
 |   
 └── README.md
 ```
@@ -116,7 +116,7 @@ cd Library-Management-System
 ### 2️⃣ Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r Requirements.txt
 ```
 
 ### 3️⃣ Create Database
