@@ -96,6 +96,7 @@ Library-Management-System/
 ├──LMS
 |   ├── library_manager.py
 |   ├── db_config.json
+|   ├── Books.csv
 |   ├── requirements.txt
 |   
 └── README.md
@@ -148,28 +149,6 @@ Update `db_config.json`
 
 ```bash
 python library_manager.py
-```
-
----
-
-## 📸 Application Preview
-
-### Add Book
-
-```markdown
-![Add Book](screenshots/add_book.png)
-```
-
-### Issue Book
-
-```markdown
-![Issue Book](screenshots/issue_book.png)
-```
-
-### Return Book
-
-```markdown
-![Return Book](screenshots/return_book.png)
 ```
 
 ---
