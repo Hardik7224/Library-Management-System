@@ -1,135 +1,150 @@
 # 📚 Library Management System
 
-A modern desktop-based **Library Management System** built using **Python Tkinter** and **MySQL**, designed to manage book records through an intuitive graphical user interface.
+<div align="center">
 
-This application supports complete CRUD operations, category-based filtering, statistics tracking, and theme customization, offering a practical real-world desktop database management experience.
+### A Smart Library Management Solution Built with Python, Tkinter & MySQL
+
+Manage books, members, issue/return operations, and library records through an intuitive desktop application.
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-green)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+</div>
 
 ---
 
-## ✨ Features
+## 🌟 Overview
+
+The **Library Management System** is a desktop application designed to simplify library operations through an easy-to-use graphical interface. It enables librarians to efficiently manage books, members, book issuance, returns, and inventory records while storing data securely in a MySQL database.
+
+---
+
+## ✨ Key Features
 
 ### 📖 Book Management
-- Add new books
-- View all books
-- Update existing records
-- Delete books
 
-### 🔍 Search & Filter
-- Search books by:
-  - Title
-  - Author
-  - Year
-  - Category
-- Live filtering
-- Filter by category
+* Add new books
+* Update book details
+* Delete books
+* Search books instantly
+* Track book availability
 
-### 📊 Statistics Dashboard
-Displays:
-- Total books
-- Unique authors
-- Books per category
-- Books per year
-- Available books
-- Issued books
+### 👥 Member Management
 
-### 📦 Book Status
-- Issue books
-- Return books
-- Track availability
+* Register members
+* Update member information
+* Maintain member records
 
-### 🎨 UI Enhancements
-- Clean Tkinter GUI
-- Light / Dark mode toggle
-- Responsive layout
-- Treeview table display
-- Scrollbar support
-- Validation & popup alerts
+### 🔄 Book Transactions
 
-### 📁 Data Export
-- Export records to CSV
+* Issue books
+* Return books
+* Track issued books
+* Maintain borrowing history
+
+### 🔍 Search & Tracking
+
+* Search by title
+* Search by author
+* Search by category
+* View available inventory
+
+### 💾 Database Integration
+
+* MySQL-based storage
+* Persistent record management
+* Fast data retrieval
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-- **Python**
-- **Tkinter**
-- **MySQL**
-- **mysql-connector-python**
-- **CSV Export**
+| Component            | Technology             |
+| -------------------- | ---------------------- |
+| Programming Language | Python                 |
+| GUI Framework        | Tkinter                |
+| Database             | MySQL                  |
+| Database Connector   | mysql-connector-python |
+| Data Handling        | JSON, CSV              |
 
 ---
 
-## 🗄️ Database Setup
+## 🏗️ System Architecture
 
-### 1. Create database
+```text
+User
+  │
+  ▼
+Tkinter GUI
+  │
+  ▼
+Python Application Logic
+  │
+  ▼
+MySQL Database
+```
 
-Run in MySQL:
+---
+
+## 📂 Project Structure
+
+```text
+Library-Management-System/
+│
+├──LMS
+|   ├── library_manager.py
+|   ├── db_config.json
+|   ├── requirements.txt
+|   
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/Hardik7224/Library-Management-System.git
+cd Library-Management-System
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Create Database
 
 ```sql
-CREATE DATABASE library_db;
-
-USE library_db;
-
-CREATE TABLE books (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
-    year INT NOT NULL,
-    category VARCHAR(100) NOT NULL,
-    status VARCHAR(20) DEFAULT 'Available'
-);
+CREATE DATABASE library_management;
 ```
 
----
-
-### 2. Install dependency
+Import the SQL file:
 
 ```bash
-pip install mysql-connector-python
+mysql -u root -p library_management < database.sql
 ```
 
----
+### 4️⃣ Configure Database
 
-### 3. Configure database connection
+Update `db_config.json`
 
-Inside `library_manager.py`, update:
-
-```python
-def connect_db():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="your_password",
-        database="library_db"
-    )
+```json
+{
+  "host": "localhost",
+  "user": "root",
+  "password": "",
+  "database": "library_management",
+  "port": 3306
+}
 ```
 
-Replace:
-
-```python
-your_password
-```
-
-with your MySQL password.
-
----
-
-## ▶️ Run the Project
-
-Clone repository:
-
-```bash
-git clone https://github.com/Hardik7224/library-management-system.git
-```
-
-Move into folder:
-
-```bash
-cd library-management-system
-```
-
-Run:
+### 5️⃣ Run Application
 
 ```bash
 python library_manager.py
@@ -137,66 +152,52 @@ python library_manager.py
 
 ---
 
-## 📂 Project Structure
+## 📸 Application Preview
 
-```bash
-library-management-system/
-│
-├── library_manager.py
-├── README.md
-└── library.csv   (optional export file)
+### Add Book
+
+```markdown
+![Add Book](screenshots/add_book.png)
+```
+
+### Issue Book
+
+```markdown
+![Issue Book](screenshots/issue_book.png)
+```
+
+### Return Book
+
+```markdown
+![Return Book](screenshots/return_book.png)
 ```
 
 ---
 
-## 📸 Preview
+## 🎯 Real-World Applications
 
-Main features include:
+🏫 School Libraries
 
-- Book entry form
-- Category selector
-- Search bar
-- Statistics
-- Treeview records
-- Dark mode
+🎓 College Libraries
 
----
+📚 Personal Book Collections
 
-## 🚀 Future Improvements
+🏢 Small Educational Institutions
 
-Planned upgrades:
-
-- Login / admin authentication
-- Book due date tracking
-- Fine calculation
-- Borrower management
-- Search by ISBN
-- SQLite support
-- Packaging into `.exe`
+🏛️ Community Libraries
 
 ---
 
-## 🎯 Learning Outcomes
+## 📈 Future Enhancements
 
-This project helped strengthen understanding of:
-
-- Python GUI development with Tkinter
-- MySQL database integration
-- CRUD operations
-- Event-driven programming
-- File export handling
-- Desktop application UI design
-
----
-
-## 👨‍💻 Author
-
-**Hardik**
-
-GitHub: https://github.com/Hardik7224
+* Barcode Scanner Integration
+* QR-Based Book Tracking
+* Fine Calculation System
+* Multi-User Authentication
+* Admin & Librarian Roles
+* Email Notifications
+* PDF Report Generation
+* Excel Export Functionality
+* Cloud Database Support
 
 ---
-
-## 📄 License
-
-This project is open-source and available under the MIT License.
